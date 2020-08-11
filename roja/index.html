@@ -1,0 +1,96 @@
+<html>
+    <head></head>
+    <body>
+
+    </body>
+
+
+    <script>
+
+
+
+    idiomanavegador= navigator.language;//idioma del navegador.
+
+   
+ detectarIdioma();
+
+
+
+      function detectarIdioma(){  filtrarespañol(); } //español
+
+function filtrarespañol(){
+  //español-españa
+  if (idiomanavegador == "es" || idiomanavegador == "es-ES" ) { idioma="español";};
+  //español-latinoamerica
+  if (idiomanavegador == "es-419" || idiomanavegador == "es-LA"|| idiomanavegador == "es-XL") { idioma="español";};
+
+  if (idiomanavegador == "es-AR") { idioma="español";};
+  if (idiomanavegador == "es-MX") { idioma="español";};
+  if (idiomanavegador == "es-US") { idioma="español";};
+  if ( idiomanavegador == "es-VE") { idioma="español";};
+  if ( idiomanavegador == "es-UY") { idioma="español";};
+  if ( idiomanavegador == "es-CO") { idioma="español";};
+  if ( idiomanavegador == "es-CL") { idioma="español";};
+  if (idiomanavegador == "es-BR") { idioma="español";};
+  if (idiomanavegador == "es-BO") { idioma="español";};
+  if (idiomanavegador == "es-PA") { idioma="español";};
+  if (idiomanavegador == "es-PE") { idioma="español";};
+
+
+
+
+  console.log(idioma );
+
+
+  // if( idioma="español"){
+  // location.href ="https://julif.github.io/visual_novel/roja/es";
+  // }
+  // else {
+  // location.href="https://julif.github.io/visual_novel/roja/en";
+  // }
+
+
+
+
+
+  var path = window.location.pathname;
+var page = path.split("/").pop();
+
+var path = path.slice(0, -11); //quita /index.html
+console.log( page );
+console.log( path );
+
+
+
+
+
+
+
+
+
+/*   if( idioma="español"){
+  location.href = path +"/es/index.html";
+  }
+  else {
+  location.href=  path +"/en/index.html";
+  } */
+
+
+  if( idioma="español"){
+  location.href = path +"/es/";
+  }
+  else {
+  location.href=  path +"/en/";
+  }
+
+
+  }
+
+
+ 
+
+
+
+
+ </script>
+</html>
