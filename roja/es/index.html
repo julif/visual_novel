@@ -1,13 +1,25 @@
 <html>
-    <head></head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 ,user-scalable=no"> 
+         <!-- css -->
+    <link rel="stylesheet" href="../style.css"/>
+    </head>
     <body>
-roja es
+        <section>
+            <div style=" text-align: center;">
+                <h1>ROJA</h1>
+                <p id="idioma_leyenda_div"></p>
+            </div>
+        </section>
     </body>
-
-
-
     <script>
+    let idioma = "español";
+    let version = "v 0.0.1"
 
-//  window.location.href = window.location.href.replace('/index.html', ' ');
+    let idioma_leyenda = "version en " + idioma +" "+ version ;
+    console.log( idioma_leyenda );
+
+    document.getElementById("idioma_leyenda_div").innerHTML = idioma_leyenda;
     </script>
 </html>
