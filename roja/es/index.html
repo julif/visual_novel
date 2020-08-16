@@ -2,6 +2,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 ,user-scalable=no"> 
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <!-- css -->
         <link rel="stylesheet" href="../style.css"/>
         <!-- favicons -->
@@ -27,21 +29,51 @@
         <meta name="msapplication-wide310x150logo" content="../img/favicon/mstile-310x150.png" />
         <meta name="msapplication-square310x310logo" content="../img/favicon/mstile-310x310.png" />
     </head>
-    <body>
+    <body  id="contenedor">
+        <div id="full">
+            <!-- <div id="tooltip"  role="tooltip">
+              <i class="fas fa-info-circle"></i><span >  se recomienda pantalla completa </span>
+           
+              <div id="arrow" data-popper-arrow></div>
+            </div> -->
+            <button id="fullwiev" onclick="lock('landscape')">
+              <i class="fa fa-expand"></i>
+            </button>
+          </div>
         <section>
             <div style=" text-align: center;">
                 <h1>ROJA</h1>
                 <p id="idioma_leyenda_div"></p>
             </div>
+            <p id="version_div"></p>
         </section>
     </body>
     <script>
     let idioma = "español";
-    let version = "v 0.0.2"
+    let version = "v 0.0.3"
 
-    let idioma_leyenda = "version en " + idioma +" "+ version ;
+    let idioma_leyenda = "version en " + idioma;
     console.log( idioma_leyenda );
 
     document.getElementById("idioma_leyenda_div").innerHTML = idioma_leyenda;
+    document.getElementById("version_div").innerHTML = version;
+    </script>
+    <script>
+        function fullScreen() {
+          // Kind of painful, but this is how it works for now
+          if (document.documentElement.requestFullscreen) {
+          document.getElementById("contenedor").requestFullscreen();
+          } else if (document.documentElement.mozRequestFullScreen) {
+            document.getElementById("contenedor").mozRequestFullScreen();
+          } else if (document.documentElement.webkitRequestFullscreen) {
+            document.getElementById("contenedor").webkitRequestFullscreen();
+          } else if (document.documentElement.msRequestFullscreen) {
+            document.getElementById("contenedor").msRequestFullscreen();
+          }
+        }
+        function lock(orientation) {
+          fullScreen();
+          screen.orientation.lock(orientation);
+        }
     </script>
 </html>

@@ -1,5 +1,11 @@
-/* 
-   roja visual novel.
+/*   
+  Proyect  Name: Roja -visual novel-
+  Author: Julif
+  Author URI: https://julif.github.io/
+  Version: 0.5
+  Description: Un tema de worpress de prueba, donde puedo practicar y testear mis habilidades con javascript php y css.
+  License: GNU General Public License v2 or later
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 @font-face {
   font-family: "julif Handwriting";
@@ -11,6 +17,7 @@
 }
 :root {
   --main-bg-color: #0b0a10;
+  --red: #e43939;
 }
 body{
   background-color: var(--main-bg-color); 
@@ -21,21 +28,80 @@ body{
 }
 section{
   background-color: #605690;
+  background-color: var(--main-bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100vh;
-  width: 100vw; */
-
   height: 100vh;
   height: 100%;
-
+  /* width: 100vw; */
 }
 h1{
   font-family:"Zooma";
   font-size: 100px;
   margin: 20px;
+  margin-top: 0;
   font-weight: 100;
-  
 }
-  
+/* --------------------------------|| fullwiev button ||----------------------------------------*/
+#full {
+  background-color: transparent;
+  color: white;
+  font-family: sans-serif;
+  margin: 10px;
+  float: right;
+  position: absolute;
+  border-radius: 20%;
+  right: 0px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  z-index: 5;
+}
+#fullwiev {
+  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border: none;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 20%;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  display: inherit;
+  outline: 0;
+  text-decoration: none;
+}
+#fullwiev:hover {
+  color: var(--red);
+}
+.fa-expand {
+  font-size: 30px!important;
+}
+/*esconder el boton en pantalla completa */
+/* 
+#contenedor:requestFullscreen >  #landscape #full #fullwiev {display: none;}
+#contenedor:-moz-full-screen > #landscape #full #fullwiev {display: none;} // Firefox/
+#contenedor:-webkit-full-screen > #landscape #full #fullwiev {display: none;} // Chrome, Safari & Opera /
+#contenedor:-msRequestFullscreen > #landscape #full #fullwiev {display: none;} // IE/Edge 
+*/
+#contenedor:requestFullscreen >   #full #fullwiev {display: none;}
+#contenedor:-moz-full-screen >  #full #fullwiev {display: none;} /* Firefox */
+#contenedor:-webkit-full-screen >  #full #fullwiev {display: none;} /* Chrome, Safari & Opera */
+#contenedor:-msRequestFullscreen >  #full #fullwiev {display: none;} /* IE/Edge */
+
+
+
+
+#version_div{
+  position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    font-family: monospace;
+    letter-spacing: -1px;
+  }
