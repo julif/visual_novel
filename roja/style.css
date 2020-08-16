@@ -93,8 +93,16 @@ h1{
 #contenedor:-msRequestFullscreen >  #full #fullwiev {display: none;} /* IE/Edge */
 
 
-
-
+/* --------------------------------|| loading screen ||----------------------------------------*/
+#preloader {
+  margin-left: 15000px;
+  position: fixed;
+  color: white;
+}
+#preloader img {
+  width: auto;
+  height: 150px;
+}
 #version_div{
   position: absolute;
     bottom: 0;
@@ -105,3 +113,26 @@ h1{
     font-family: monospace;
     letter-spacing: -1px;
   }
+#porcentaje_contenedor {
+  background-color: black;
+  color: white;
+  height: 20px;
+  display: flex;
+  position: relative;
+}
+#porcentaje_contenedor #barra {
+  background-color: white;
+  display: block;
+  width: 0%;
+  height: 100%;
+}
+#porcentaje_contenedor #porcentaje {
+  color: #f7f7f7;
+  top: 2px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: "proxima-nova",sans-serif;
+  mix-blend-mode: difference;
+}
