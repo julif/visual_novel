@@ -1,6 +1,7 @@
 var imagenes_a_cargar = [
   "julif.svg",
-  "portrait_roja.png"
+  "portrait_roja.png",
+  "fondo_mainmenu.png"
 ];
 precarga( imagenes_a_cargar );
 
