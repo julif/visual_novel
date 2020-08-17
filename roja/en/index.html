@@ -86,8 +86,12 @@
     console.log( idioma_leyenda );
 
     document.getElementById("idioma_leyenda_div").innerHTML = idioma_leyenda;
-    document.getElementById("version_div").innerHTML = version;
-
+    // document.getElementById("version_div").innerHTML = version;
+    var x = document.getElementsByClassName("version_div");
+var i;
+for (i = 0; i < x.length; i++) {
+  x[i].innerHTML = version;
+}
 
 
     document.getElementById("sub_title").innerHTML = "Online Interactive Visual Novel";

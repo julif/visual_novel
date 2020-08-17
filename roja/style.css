@@ -51,6 +51,23 @@ h1{
   margin-top: 0;
   font-weight: 100;
 }
+.version_div{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  font-family: monospace;
+  letter-spacing: -1px;
+}
+
+@media only screen and (max-width: 800px){
+  .version_div {
+    padding: 10px;
+    padding-bottom: 0px;
+  }
+}
 /* --------------------------------|| fullwiev button ||----------------------------------------*/
 #full {
   background-color: transparent;
@@ -164,16 +181,6 @@ h1{
   width: auto;
   height: 150px;
 }
-.version_div{
-  position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 20px;
-    padding-bottom: 10px;
-    font-size: 15px;
-    font-family: monospace;
-    letter-spacing: -1px;
-  }
 #porcentaje_contenedor {
   background-color: black;
   color: white;
@@ -197,13 +204,6 @@ h1{
   font-family: "proxima-nova",sans-serif;
   mix-blend-mode: difference;
 }
-@media only screen and (max-width: 800px){
-  .version_div {
-    padding: 10px;
-    padding-bottom: 0px;
-  }
-}
-
 
 /* --------------------------------|| portrait y landscape ||----------------------------------------*/
 
@@ -215,7 +215,6 @@ h1{
   #landscape{ display: inherit;}
   #portrait{ display: none!important;}
 }
-
 #portrait img{
   width: 250px;
   height: auto;
