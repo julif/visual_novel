@@ -229,8 +229,8 @@ h1{
   0%   {transform: rotate(90deg);}
   100% {transform: rotate(0deg);}
 }
-
-
+/* --------------------------------|| terminado ||----------------------------------------*/
+#terminado{ display: none;}
 /* --------------------------------|| main menu ||----------------------------------------*/
 #main_menu{
   /* background-color: transparent!important; */
