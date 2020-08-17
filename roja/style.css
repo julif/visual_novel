@@ -96,6 +96,59 @@ h1{
 #contenedor:-msRequestFullscreen >  #full #fullwiev {display: none;} /* IE/Edge */
 
 
+/*----|| popper.js tooltip ||-----*/
+#tooltip {
+  color: #0b0a10;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: left;
+  pointer-events: none;
+  z-index: 1;
+  background: rgb(255, 255, 255);
+  background: #ffc522;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: flex;
+  opacity: 0;
+  transition: all 0.5s ease 0s;
+  -webkit-box-shadow: 2px 9px 31px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 9px 31px -1px rgba(0,0,0,0.75);
+  box-shadow: 2px 9px 31px -1px rgba(0,0,0,0.75);
+}
+.fa-info-circle {
+  background-color: black;
+  color: #ffc522;
+  padding: 6px 7px;
+  font-size: 20px;
+  border-radius: 6px;
+}
+#tooltip span {
+  width: 130px;
+  text-align: center;
+}
+#tooltip[data-popper-placement^='left'] > #arrow {
+  right: -4px;
+}
+#arrow, #arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  z-index: -1;
+}
+#arrow::before {
+  content: '';
+  transform: rotate(45deg);
+  background: white;
+  background: #ffc522;
+}
+#contenedor:-webkit-full-screen > #full #tooltip {
+  display: none;
+}
+
+
 /* --------------------------------|| loading screen ||----------------------------------------*/
 #preloader {
   margin-left: 15000px;
@@ -184,7 +237,7 @@ h1{
   font-size: 18px;
   font-size: 24px;
 }
-#main_menu button {
+#start_button{
   color: white;
   border: 2px solid white;
   padding: 11px;
@@ -208,11 +261,11 @@ h1{
   }
   #sub_title {
     font-size: 15px;
-}
-  #main_menu button {
+  }
+ #start_button{
     font-size: 15px;
     padding: 8px;
     margin: 1%;
-}
+ }
 }
 

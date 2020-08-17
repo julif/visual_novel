@@ -31,7 +31,7 @@
         <meta name="msapplication-wide310x150logo" content="../img/favicon/mstile-310x150.png" />
         <meta name="msapplication-square310x310logo" content="../img/favicon/mstile-310x310.png" />
     </head>
-    <body id="contenedor">
+    <body  id="contenedor">
         <div id="full">
             <!-- <div id="tooltip"  role="tooltip">
               <i class="fas fa-info-circle"></i><span >  se recomienda pantalla completa </span>
@@ -55,7 +55,15 @@
         <!--  terminado ------------------------------------------------------------------------------  --> 
         <div id="terminado"> 
           <landscape id="landscape">
-            <p> landscape </p>
+            <!--  main menu ------------------------------------------------------------------------------  -->
+            <section id="main_menu">
+              <div style="text-align: center;padding: 32px;">
+                <h1 id="roja_titulo">R<span>O</span>JA</h1>
+                <p id="sub_title"> Novela Visual Interactiva Online </p>
+                <button id="start_button" onclick="myFunction()"> Iniciar </button>
+              </div>
+            
+            </section>
           </landscape>
           <portrait  id="portrait">   
             <section>  <img  src="../img/portrait_roja.png"> </section>
@@ -71,6 +79,11 @@
 
     document.getElementById("idioma_leyenda_div").innerHTML = idioma_leyenda;
     document.getElementById("version_div").innerHTML = version;
+
+
+
+    document.getElementById("sub_title").innerHTML = "Online Interactive Visual Novel";
+    document.getElementById("start_button").innerHTML = "Start";
     </script>
     <!-- fullwiev -->
     <script src='../js/fullwiev.js' type='text/javascript'></script>
