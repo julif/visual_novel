@@ -152,6 +152,8 @@ h1{
 }
 
 #portrait img{
+  width: 250px;
+  height: auto;
   animation-name: portrait_image_rotation; 
   animation-duration: 1.0s;
   transform: rotate(90deg);
@@ -162,3 +164,55 @@ h1{
   0%   {transform: rotate(90deg);}
   100% {transform: rotate(0deg);}
 }
+
+
+/* --------------------------------|| main menu ||----------------------------------------*/
+
+#roja_titulo {
+  font-family: 'Zooma';
+  font-size: 200px;
+  margin: 20px;
+  font-weight: 100;
+  margin-bottom: 0px!important;
+  margin-top: 0px!important;
+}
+#roja_titulo span {
+  color: #e43939;
+}
+#sub_title {
+  margin-top: 8px;
+  font-size: 18px;
+  font-size: 24px;
+}
+#main_menu button {
+  color: white;
+  border: 2px solid white;
+  padding: 11px;
+  margin: 4%;
+  font-size: 1.0vw;
+  /* letter-spacing: 2.5px; */
+  font-kerning: none;
+  /* font-weight: 600; */
+  cursor: pointer;
+  background-color: #0b0a10;
+  /* font-family: "julif Handwriting"; */
+  font-size: 25px;
+  font-family: "proxima-nova",sans-serif;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 800px){
+  #roja_titulo {
+    font-size: 100px;
+    margin: 15px;
+    font-weight: 100;
+  }
+  #sub_title {
+    font-size: 15px;
+}
+  #main_menu button {
+    font-size: 15px;
+    padding: 8px;
+    margin: 1%;
+}
+}
+

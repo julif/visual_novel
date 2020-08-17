@@ -41,17 +41,26 @@
             <button id="fullwiev" onclick="lock('landscape')">
               <i class="fa fa-expand"></i>
             </button>
-        </div>
+          </div>
         <!--  loading screen ------------------------------------------------------------------------------  --> 
-        <section>
+        <div id="preloader" ></div> 
+        <section id="loading_screen">
             <div style=" text-align: center;">
                 <h1>ROJA</h1>
                 <p id="idioma_leyenda_div"></p>
+                <div id="porcentaje_contenedor"><div id="barra" style="width: 100%;"></div>  <div id="porcentaje">100%</div></div>
             </div>
             <p id="version_div"></p>
         </section>
         <!--  terminado ------------------------------------------------------------------------------  --> 
-        <section id="terminado"> terminado </section>
+        <div id="terminado"> 
+          <landscape id="landscape">
+            <p> landscape </p>
+          </landscape>
+          <portrait  id="portrait">   
+            <section>  <img  src="../img/portrait_roja.png"> </section>
+          </portrait >
+        </div>
     </body>
     <script>
     let idioma = "english";

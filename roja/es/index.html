@@ -55,18 +55,24 @@
         <!--  terminado ------------------------------------------------------------------------------  --> 
         <div id="terminado"> 
           <landscape id="landscape">
-            <p> landscape </p>
+            <!--  main menu ------------------------------------------------------------------------------  -->
+            <section id="main_menu">
+              <div style="text-align: center;padding: 32px;">
+                <h1 id="roja_titulo">R<span>O</span>JA</h1>
+                <p id="sub_title"> Novela Visual Interactiva Online </p>
+                <button onclick="myFunction()"> Iniciar </button>
+              </div>
+            
+            </section>
           </landscape>
           <portrait  id="portrait">   
-            <section>  <img class="animate__animated animate__rotateIn" style=" width: 250px;" src="../img/portrait_roja.png"> </section>
-           
+            <section>  <img  src="../img/portrait_roja.png"> </section>
           </portrait >
-  
         </div>
     </body>
     <script>
     let idioma = "español";
-    let version = "v 0.0.6"
+    let version = "v 0.0.7"
 
     let idioma_leyenda = "version en " + idioma;
     console.log( idioma_leyenda );
