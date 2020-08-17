@@ -25,6 +25,7 @@ body{
   /* font-family:"julif Handwriting"; */
   font-family: "proxima-nova",sans-serif;
   color: white;
+  position: relative;
 }
 section{
   background-color: #605690;
@@ -35,6 +36,8 @@ section{
   height: 100vh;
   height: 100%;
   /* width: 100vw; */
+  position: absolute;
+    width: 100%;
 }
 h1{
   font-family:"Zooma";
@@ -135,4 +138,29 @@ h1{
   text-align: center;
   font-family: "proxima-nova",sans-serif;
   mix-blend-mode: difference;
+}
+
+
+
+@media (orientation: portrait) {
+  /* #full-container{ height: 100%; }
+  #button{ position: fixed!important; font-size: 3vw; }
+  #titulo {font-size: 5vw;  }
+  #texto {font-size: 4vw; } */
+
+  #landscape{ display: none;}
+  #portrait{ display: flex;}
+  html, body {
+    /* height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+}
+@media (orientation:landscape) {
+
+  #landscape{ display: inherit;}
+  #portrait{ display: none!important;}
+
 }
