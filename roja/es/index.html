@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <!-- css -->
         <link rel="stylesheet" href="../style.css"/>
+        <link rel="stylesheet" href="../fonts/icomoon.css"> 
         <!-- --- Jquery --- -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <!-- popper.js -->
@@ -51,19 +52,25 @@
                 <p id="idioma_leyenda_div"></p>
                 <div id="porcentaje_contenedor"><div id="barra" style="width: 100%;"></div>  <div id="porcentaje">100%</div></div>
             </div>
-            <p id="version_div"></p>
+            <p class="version_div"></p>
         </section>
         <!--  terminado ------------------------------------------------------------------------------  --> 
         <div id="terminado"> 
           <landscape id="landscape">
             <!--  main menu ------------------------------------------------------------------------------  -->
             <section id="main_menu">
+              <div id="main_menu_background"></div>
               <div style="text-align: center;padding: 32px;">
                 <h1 id="roja_titulo">R<span>O</span>JA</h1>
                 <p id="sub_title"> Novela Visual Interactiva Online </p>
                 <button id="start_button" onclick="myFunction()"> Iniciar </button>
               </div>
-            
+              <p class="version_div"></p>
+              <div id="redes_mainmenu"> 
+                <!-- <div class="redes" ><a href="https://www.google.com/"> <i class="fab fa-facebook-square"></i>  <g>Julif </g> </a> </div> -->
+                <div class="redes"><a href="https://ko-fi.com/juli22f"> <i class="icon-ko-fi1"></i><g> ko-fi </g></a></div>
+              </div>
+              <div id="signature"> <img src="../img/julif.svg"></div>
             </section>
           </landscape>
           <portrait  id="portrait">   
@@ -73,13 +80,20 @@
     </body>
     <script>
     let idioma = "español";
-    let version = "v 0.0.8.1"
+    let version = "v 0.0.9"
 
     let idioma_leyenda = "version en " + idioma;
     console.log( idioma_leyenda );
 
     document.getElementById("idioma_leyenda_div").innerHTML = idioma_leyenda;
-    document.getElementById("version_div").innerHTML = version;
+    // document.getElementById("version_div").innerHTML = version;
+    var x = document.getElementsByClassName("version_div");
+var i;
+for (i = 0; i < x.length; i++) {
+  x[i].innerHTML = version;
+}
+
+
     </script>
      <!-- fullwiev -->
      <script src='../js/fullwiev.js' type='text/javascript'></script>
