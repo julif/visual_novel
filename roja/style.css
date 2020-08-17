@@ -125,7 +125,7 @@ h1{
   font-size: 20px;
   border-radius: 6px;
 }
-#tooltip span {
+#tooltip_message{
   width: 130px;
   text-align: center;
 }

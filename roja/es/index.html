@@ -36,7 +36,7 @@
     <body  id="contenedor">
         <div id="full">
             <div id="tooltip"  role="tooltip">
-              <i class="fas fa-info-circle"></i><span >  se recomienda pantalla completa </span>
+              <i class="fas fa-info-circle"></i><span id="tooltip_message" >  se recomienda pantalla completa </span>
               <div id="arrow" data-popper-arrow></div>
             </div>
             <button id="fullwiev" onclick="lock('landscape')">
@@ -73,7 +73,7 @@
     </body>
     <script>
     let idioma = "español";
-    let version = "v 0.0.7"
+    let version = "v 0.0.8.1"
 
     let idioma_leyenda = "version en " + idioma;
     console.log( idioma_leyenda );
@@ -85,42 +85,6 @@
      <script src='../js/fullwiev.js' type='text/javascript'></script>
      <!-- pre-carga -->
      <script src='../js/precarga.js' type='text/javascript'></script>
-
-     <script>
-      // const button = document.querySelector('#button');
-      
-      const button = document.querySelector('#fullwiev');
-      const tooltip = document.querySelector('#tooltip');
-    
-      // Pass the button, the tooltip, and some options, and Popper will do the
-      // magic positioning for you:
-    /*   Popper.createPopper(button, tooltip, {
-        placement: 'right',
-      }); */
-      Popper.createPopper(button, tooltip, {
-        placement: 'left',
-      modifiers: [
-        {
-          name: 'offset',
-         
-          options: {
-            offset: [0, 10],
-          },
-        },
-      ],
-    });
-    </script>
-    
-      <script> 
-       setTimeout(myFunction2, 3000)
-       setTimeout(myFunction3, 12000)
-       function myFunction2() {
-          document.getElementById("tooltip").style.opacity = 100;
-      
-         }
-    
-         function myFunction3() {
-          document.getElementById("tooltip").style.opacity = 0;
-         }
-        </script>
+     <!-- tooltip -->
+     <script src='../js/tooltip.js' type='text/javascript'></script>
 </html>
