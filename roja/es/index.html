@@ -63,7 +63,7 @@
               <div style="text-align: center;padding: 32px;">
                 <h1 id="roja_titulo">R<span>O</span>JA</h1>
                 <p id="sub_title"> Novela Visual Interactiva Online </p>
-                <button id="start_button" onclick="myFunction()"> Iniciar </button>
+                <button id="start_button" onclick="start()"> Iniciar </button>
               </div>
               <p class="version_div"></p>
               <div id="redes_mainmenu"> 
@@ -72,6 +72,35 @@
               </div>
               <div id="signature"> <img src="../img/julif.svg"></div>
             </section>
+            <container  id="container" style="display: none;">
+              <aspect_ratio>
+                <div id="full-container">
+                  <div id="parte-superior">
+                    <div id="fondo"  >
+                      <div id="fondo_img" class="animate__animated animate__fadeIn"></div>
+                    </div>
+                    <div id="barra-superior" ></div>
+                    <div id="fondo_superior"></div>
+                    <div id="personaje-container">
+                      <div id="personajes">
+                        <div class='personaje' style='--h: ${dynamicHeight}px' ><img class="animate__animated animate__fadeIn"   src="../img/julif.svg" style="height: 60%;width: auto;"></div>
+                      </div><!-- personajes -->
+                      <script> let dynamicHeight = document.getElementById("personaje-container").clientWidth /4.0;   $( ".personaje" ).css( "--h", dynamicHeight+"px" ); </script>
+                    </div><!-- personaje-container -->
+                  </div> <!-- parte-superior -->
+                  <div id="parte-inferior">
+                    <div style=" width: 100%; height: 5%;"></div>
+                    <div id="titulo"> 
+                      <p style="    margin: 0px;color: #726e7d;" id="nombre_div"  > </p>
+                    </div>
+                    <div id="texto" >
+                      <p id="dialogo"  style="color: #4e4861;" class="animate__animated animate__fadeInDown" >presenta: </p>
+                    </div>
+                    <button id="button" style="position: absolute;bottom: 0px;right: 0;" >siguiente</button>
+                  </div> <!-- parte-inferior -->
+                </div>  <!-- full-container -->
+              </aspect_ratio>
+            </container>
           </landscape>
           <portrait  id="portrait">   
             <section>  <img  src="../img/portrait_roja.png"> </section>
@@ -80,7 +109,7 @@
     </body>
     <script>
     let idioma = "español";
-    let version = "v 0.0.9.1"
+    let version = "v 0.0.10"
 
     let idioma_leyenda = "version en " + idioma;
     console.log( idioma_leyenda );
@@ -92,6 +121,17 @@ var i;
 for (i = 0; i < x.length; i++) {
   x[i].innerHTML = version;
 }
+
+
+
+
+
+function start() {
+  document.getElementById("main_menu").style.display = "none";
+  document.getElementById("container").style.display = "flex";
+}
+
+
     </script>
      <!-- fullwiev -->
      <script src='../js/fullwiev.js' type='text/javascript'></script>

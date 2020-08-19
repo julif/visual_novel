@@ -35,52 +35,81 @@
         <meta name="msapplication-square310x310logo" content="../img/favicon/mstile-310x310.png" />
     </head>
     <body  id="contenedor">
-        <div id="full">
-            <div id="tooltip"  role="tooltip">
-              <i class="fas fa-info-circle"></i><span id="tooltip_message" >  se recomienda pantalla completa </span>
-              <div id="arrow" data-popper-arrow></div>
-            </div>
-            <button id="fullwiev" onclick="lock('landscape')">
-              <i class="fa fa-expand"></i>
-            </button>
+      <div id="full">
+          <div id="tooltip"  role="tooltip">
+            <i class="fas fa-info-circle"></i><span id="tooltip_message" >  se recomienda pantalla completa </span>
+            <div id="arrow" data-popper-arrow></div>
           </div>
-        <!--  loading screen ------------------------------------------------------------------------------  --> 
-        <div id="preloader" ></div> 
-        <section id="loading_screen">
-            <div style=" text-align: center;">
-                <h1>ROJA</h1>
-                <p id="idioma_leyenda_div"></p>
-                <div id="porcentaje_contenedor"><div id="barra" style="width: 100%;"></div>  <div id="porcentaje">100%</div></div>
+          <button id="fullwiev" onclick="lock('landscape')">
+            <i class="fa fa-expand"></i>
+          </button>
+        </div>
+      <!--  loading screen ------------------------------------------------------------------------------  --> 
+      <div id="preloader" ></div> 
+      <section id="loading_screen">
+          <div style=" text-align: center;">
+              <h1>ROJA</h1>
+              <p id="idioma_leyenda_div"></p>
+              <div id="porcentaje_contenedor"><div id="barra" style="width: 100%;"></div>  <div id="porcentaje">100%</div></div>
+          </div>
+          <p class="version_div"></p>
+      </section>
+      <!--  terminado ------------------------------------------------------------------------------  --> 
+      <div id="terminado"> 
+        <landscape id="landscape">
+          <!--  main menu ------------------------------------------------------------------------------  -->
+          <section id="main_menu">
+            <div id="main_menu_background"></div>
+            <div style="text-align: center;padding: 32px;">
+              <h1 id="roja_titulo">R<span>O</span>JA</h1>
+              <p id="sub_title"> Novela Visual Interactiva Online </p>
+              <button id="start_button" onclick="start()"> Iniciar </button>
             </div>
             <p class="version_div"></p>
-        </section>
-        <!--  terminado ------------------------------------------------------------------------------  --> 
-        <div id="terminado"> 
-          <landscape id="landscape">
-            <!--  main menu ------------------------------------------------------------------------------  -->
-            <section id="main_menu">
-              <div id="main_menu_background"></div>
-              <div style="text-align: center;padding: 32px;">
-                <h1 id="roja_titulo">R<span>O</span>JA</h1>
-                <p id="sub_title"> Novela Visual Interactiva Online </p>
-                <button id="start_button" onclick="myFunction()"> Iniciar </button>
-              </div>
-              <p class="version_div"></p>
-              <div id="redes_mainmenu"> 
-                <!-- <div class="redes" ><a href="https://www.google.com/"> <i class="fab fa-facebook-square"></i>  <g>Julif </g> </a> </div> -->
-                <div class="redes"><a href="https://ko-fi.com/juli22f"> <i class="icon-ko-fi1"></i><g> ko-fi </g></a></div>
-              </div>
-              <div id="signature"> <img src="../img/julif.svg"></div>
-            </section>
-          </landscape>
-          <portrait  id="portrait">   
-            <section>  <img  src="../img/portrait_roja.png"> </section>
-          </portrait >
-        </div>
-    </body>
+            <div id="redes_mainmenu"> 
+              <!-- <div class="redes" ><a href="https://www.google.com/"> <i class="fab fa-facebook-square"></i>  <g>Julif </g> </a> </div> -->
+              <div class="redes"><a href="https://ko-fi.com/juli22f"> <i class="icon-ko-fi1"></i><g> ko-fi </g></a></div>
+            </div>
+            <div id="signature"> <img src="../img/julif.svg"></div>
+          </section>
+          <container  id="container" style="display: none;">
+            <aspect_ratio>
+              <div id="full-container">
+                <div id="parte-superior">
+                  <div id="fondo"  >
+                    <div id="fondo_img" class="animate__animated animate__fadeIn"></div>
+                  </div>
+                  <div id="barra-superior" ></div>
+                  <div id="fondo_superior"></div>
+                  <div id="personaje-container">
+                    <div id="personajes">
+                      <div class='personaje' style='--h: ${dynamicHeight}px' ><img class="animate__animated animate__fadeIn"   src="../img/julif.svg" style="height: 60%;width: auto;"></div>
+                    </div><!-- personajes -->
+                    <script> let dynamicHeight = document.getElementById("personaje-container").clientWidth /4.0;   $( ".personaje" ).css( "--h", dynamicHeight+"px" ); </script>
+                  </div><!-- personaje-container -->
+                </div> <!-- parte-superior -->
+                <div id="parte-inferior">
+                  <div style=" width: 100%; height: 5%;"></div>
+                  <div id="titulo"> 
+                    <p style="    margin: 0px;color: #726e7d;" id="nombre_div"  > </p>
+                  </div>
+                  <div id="texto" >
+                    <p id="dialogo"  style="color: #4e4861;" class="animate__animated animate__fadeInDown" >presents: </p>
+                  </div>
+                  <button id="button" style="position: absolute;bottom: 0px;right: 0;" >Next</button>
+                </div> <!-- parte-inferior -->
+              </div>  <!-- full-container -->
+            </aspect_ratio>
+          </container>
+        </landscape>
+        <portrait  id="portrait">   
+          <section>  <img  src="../img/portrait_roja.png"> </section>
+        </portrait >
+      </div>
+  </body>
     <script>
     let idioma = "english";
-    let version = "v 0.0.9.1"
+    let version = "v 0.0.10"
     
     let idioma_leyenda = idioma +" version ";
     console.log( idioma_leyenda );
@@ -91,6 +120,12 @@
 var i;
 for (i = 0; i < x.length; i++) {
   x[i].innerHTML = version;
+}
+
+
+function start() {
+  document.getElementById("main_menu").style.display = "none";
+  document.getElementById("container").style.display = "flex";
 }
 
 
