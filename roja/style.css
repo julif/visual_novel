@@ -362,7 +362,7 @@ h1{
 
 
 
-
+/* --------------------------------|| visual novel ||----------------------------------------*/
 container {
   height: 100vh;
   width: 100%;
@@ -500,11 +500,25 @@ aspect_ratio {
   justify-content: center;
   align-items: flex-end;
 }
-.personaje img {
+#personaje-container #personajes .personaje img {
   animation-delay: 0.30s;
 }
-
-
+@keyframes slidein {
+  from {
+    width: 0px;
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    /* width: 150px; This will change for each element */
+    /* width: fit-content; */
+    /* width: 100%; */
+    width: var(--h);            /*This will change for each element */
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+  
 
 /*----|| parte inferior ||-----*/
 
@@ -538,7 +552,7 @@ aspect_ratio {
   text-align: center;
   margin: 0px auto;
 }
-
+#parte-inferior #texto p{animation-delay: 0.70s;}
 
 
 
