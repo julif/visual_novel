@@ -562,3 +562,20 @@ aspect_ratio {
   cursor: pointer;
   /* transition: all 0.5s ease 0s; */
 }
+
+@media only screen and (max-width: 800px){
+  #titulo {
+    font-size: 3.8vw;
+    height: 35%;
+  }
+  #texto {
+    font-size: 3.0vw;
+    min-height: 20%;
+  }
+  #full-container #button {
+      font-size: 2.5vw;
+  }
+  
+  
+
+}
