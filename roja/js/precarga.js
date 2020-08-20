@@ -2,7 +2,14 @@ var imagenes_a_cargar = [
   "julif.svg",
   "portrait_roja.png",
   "fondo_mainmenu.png",
-  "slide1.png"
+  "slide_1.png",
+  "slide_2.png",
+  "red_1.png",
+  "lobo_1.png",
+  "fondo_1.png",
+  "fondo_2.png",
+  "fondo_superior_1.png",
+  "fondo_superior_2.png"
 
 ];
 precarga( imagenes_a_cargar );

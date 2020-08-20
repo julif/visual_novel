@@ -1,4 +1,4 @@
-let version = "v 0.0.11"
+let version = "v 0.0.12"
 
 // mostrar version en .versiondiv
 var x = document.getElementsByClassName("version_div");
