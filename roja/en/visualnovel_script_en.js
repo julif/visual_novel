@@ -62,9 +62,38 @@ function next() {
       dialogo = "I'm very hungry little one, aren't you going to offer me anything that you bring in that basket? where are the manners of yesteryear?";
       // personajes.insertAdjacentHTML("beforeend", newPersonaje);
       personajes.innerHTML=newPersonaje;
+  
+      i++;  
+    break;
+    case 6:
+      newPersonaje = `<div class='personaje' style='--h: ${dynamicHeight}px' ><img    src="../img/red_2.png"  class="animate__animated animate__fadeInLeft"  style="height: 100%;width: auto;"></div>`; 
+      
+        nombre="- red -";
+        dialogo = "oh! Excuse me but I don't think I have anything of your liking";
+
+        personajes.innerHTML=newPersonaje;
+        
+        // document.getElementsByClassName("personaje")[1].style.filter= "brightness(0.5);";
+        i++;  
+      break;
+      case 7:
+        newPersonaje = `<div class='personaje' style='--h: ${dynamicHeight}px' ><img    src="../img/lobo_1.png"  class="animate__animated animate__fadeInRight"  style="height: 100%;width: auto;"></div>`; 
+        nombre="- wolf -";
+        dialogo = "ooohhhh but of course you bring something to my liking, I can smell loaves of bread, I can smell some apples and I can smell ...";
+        personajes.innerHTML=newPersonaje;
+            
+        i++;
+    break;
+    case 8:
+      newPersonaje = `<div class='personaje' style='--h: ${dynamicHeight}px; animation: none' ><img    src="../img/lobo_1.png" style="height: 100%;width: auto;"></div>`; 
+      nombre="- wolf -";  
+      dialogo = "a dead body";
+      // personajes.insertAdjacentHTML("beforeend", newPersonaje);
+      personajes.innerHTML=newPersonaje;
       document.getElementById("button").style.display= 'none';
       i++;  
     break;
+
   }
   
   // personajes.innerHTML=newPersonaje;

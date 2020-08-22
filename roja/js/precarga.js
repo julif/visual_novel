@@ -5,6 +5,7 @@ var imagenes_a_cargar = [
   "slide_1.png",
   "slide_2.png",
   "red_1.png",
+  "red_2.png",
   "lobo_1.png",
   "fondo_1.png",
   "fondo_2.png",

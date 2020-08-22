@@ -573,7 +573,12 @@ aspect_ratio {
   cursor: pointer;
   /* transition: all 0.5s ease 0s; */
 }
-
+#full-container #button:active {
+  outline: none;
+  background-color: white!important;
+  color: black!important;
+}
+#full-container #button:focus{ outline: none;}
 @media only screen and (max-width: 800px){
   #parte-inferior #titulo {
     font-size: 3.8vw;
