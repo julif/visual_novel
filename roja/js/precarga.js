@@ -7,6 +7,8 @@ var imagenes_a_cargar = [
   "red_1.png",
   "red_2.png",
   "lobo_1.png",
+  "lobo_2.png",
+  "lobo_3.png",
   "fondo_1.png",
   "fondo_2.png",
   "fondo_superior_1.png",

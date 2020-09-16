@@ -81,17 +81,17 @@ function next() {
       break;
       case 7:
 
-          newPersonaje = `<div class='personaje' style='--h: ${dynamicHeight}px' ><img    src="../img/lobo_1.png"  class="animate__animated animate__fadeInRight"  style="height: 100%;width: auto;"></div>`; 
+          newPersonaje = `<div class='personaje' style='--h: ${dynamicHeight}px' ><img    src="../img/lobo_3.png"  class="animate__animated animate__fadeInRight"  style="height: 100%;width: auto;"></div>`; 
           nombre="- lobo -";
-          dialogo = "ooohhhh pero claro que traes algo de mi gusto, puedo oler hogazas de pan, puedo oler algunas manzanas y puedo oler...";
+          dialogo = "ooohhhh pero claro que traes algo de mi gusto.";
           personajes.innerHTML=newPersonaje;
           
           i++;
       break;
       case 8:
-        newPersonaje = `<div class='personaje' style='--h: ${dynamicHeight}px; animation: none' ><img    src="../img/lobo_1.png" style="height: 100%;width: auto;"></div>`; 
+        newPersonaje = `<div class='personaje' style='--h: ${dynamicHeight}px; animation: none' ><img    src="../img/lobo_2.png" style="height: 100%;width: auto;"></div>`; 
         nombre="- lobo -";  
-        dialogo = "un cadaver";
+        dialogo = " puedo oler hogazas de pan, puedo oler algunas manzanas y puedo oler...";
         // personajes.insertAdjacentHTML("beforeend", newPersonaje);
         personajes.innerHTML=newPersonaje;
         document.getElementById("button").style.display= 'none';
